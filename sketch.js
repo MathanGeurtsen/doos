@@ -1,13 +1,13 @@
 
-var d = 3/20 * windowHeight
+let d = 3/20 * windowHeight
 
-var x = windowWidth * 1/20;
-var y = windowWidth * 1/20;
-var w = windowWidth * 18/20;
-var h = windowWidth * 18/20;
+let x = windowWidth * 1/20;
+let y = windowWidth * 1/20;
+let w = windowWidth * 18/20;
+let h = windowWidth * 18/20;
 
-var lengthW = 1/3 * windowWidth;
-var lengthH = 1/3 * windowHeighth;
+let lengthW = 1/3 * windowWidth;
+let lengthH = 1/3 * windowHeighth;
 
 let x1 = 1/6 * (w-x);       let y1 = 1/3 * (h-y);
 let x2 = 23.3/60 * l(w-x);  let y2 = 1/3 * (h-y);
