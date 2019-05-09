@@ -105,12 +105,13 @@ function draw() {
   // ellipse(x,y,25); OLD
 
   // ball1(blue);
- 
 }
 
 //de functie die aangeroepen wordt als er OSC-data binnenkomt
 function oscReceiver(address,msg) {
   //als de variabele address gelijk is aan /y wordt de code tussen de {} uitegevoerd
+
+  console.log(msg);
   if (address === "sensor1 ,1") {
     ball1(blue);
   }
@@ -171,32 +172,32 @@ function oscReceiver(address,msg) {
     x = msg;
   }
 
-  if (address === "sensor1 ,1") {
-    rect1(blue);
+  if (address === "sensor9 ,1") {
+    rect9(blue);
   }
-  else if (adress === "sensor1 , 0"){
-    rect1(red);    
-  }
-
-  if (address === "sensor1 ,1") {
-    rect1(blue);
-  }
-  else if (adress === "sensor1 , 0"){
-    rect1(red);    
+  else if (adress === "sensor9 , 0"){
+    rect9(red);    
   }
 
-  if (address === "sensor1 ,1") {
-    rect1(blue);
+  if (address === "sensor10 ,1") {
+    rect10(blue);
   }
-  else if (adress === "sensor1 , 0"){
-    rect1(red);    
+  else if (adress === "sensor10 , 0"){
+    rect10(red);    
   }
 
-  if (address === "sensor1 ,1") {
-    rect1(blue);
+  if (address === "sensor11 ,1") {
+    rect11(blue);
   }
-  else if (adress === "sensor1 , 0"){
-    rect1(red);    
+  else if (adress === "sensor11 , 0"){
+    rect11(red);    
+  }
+
+  if (address === "sensor12 ,1") {
+    rect12(blue);
+  }
+  else if (adress === "sensor12 , 0"){
+    rect12(red);    
   }
 
 }
