@@ -1,8 +1,4 @@
-function ball1() {
-  fill(900);
-  circle(x,y,d);
-};
-
+// declaring public variables
 let x1; let y1;
 let x2; let y2;
 let x3; let y3;
@@ -14,6 +10,13 @@ let x8; let y8;
 
 let d; let x; let y; let h; let w;
 
+let black = '#ffffff';
+let grey = '#f3d3d3';
+let red = '#ff0000';
+let green = '#00ff00';
+let blue = '#0000ff';
+
+let xoffleft; let yoffup;
 
 function setup() {
   //plaats hier de code die maar eenn keer hoeft te worden uitgevoerd
@@ -30,27 +33,35 @@ function setup() {
   let lengthW = 1/3 * windowWidth;
   let lengthH = 1/3 * windowHeight;
 
-  let x1 = 1/6 * (w-x);       let y1 = 1/3 * (h-y);
-  let x2 = 23.3/60 * (w-x);   let y2 = 1/3 * (h-y);
-  let x3 = 36.6/60* (w-x);    let y3 = 1/3 * (h-y);
-  let x4 = 5/6* (w-x);        let y4 = 1/3 * (h-y);
-  let x5 = 1/6* (w-x);        let y5 = 2/3 * (h-y);
-  let x6 = 23.3/60* (w-x);    let y6 = 2/3 * (h-y);
-  let x7 = 36.6/60* (w-x);    let y7 = 2/3 * (h-y);
-  let x8 = 5/6* (w-x);        let y8 = 2/3 * (h-y);
+  xoffleft = 1/20 * windowWidth;
+  yoffup = 1/20* windowHeight;
 
-  let black = '#00000';
-  let dark = '#d3d3d3';
-  let red = '#ff0000';
-
-
-  background(dark);
+  background(black);
   fill(red);
   rect(windowWidth* 1/20, windowHeight* 1/20, windowWidth* 18/20, windowHeight* 18/20);
+
+  function ball1 (color){ drawcircle(1/6,1/3, d,color)}
+  function ball2 (color){ drawcircle(1/6,2/3, d,color)}
+  function ball3 (color){ drawcircle(2/6,1/3, d,color)}
+  function ball4 (color){ drawcircle(2/6,2/3, d,color)}
+  function ball5 (color){ drawcircle(3/6,1/3, d,color)}
+  function ball6 (color){ drawcircle(3/6,2/3, d,color)}
+  function ball7 (color){ drawcircle(4/6,1/3, d,color)}
+  function ball8 (color){ drawcircle(4/6,2/3, d,color)}
+
+
+  // var testball = drawcircle(1/6,1/3,d, green)
+
 };
 
 function draw() {
-  ellipse(50, 50, 80, 80);
+  if (message[1] == "ball1") {
+    ball1(blue);
+  }
+  else if (message[1] == "ball2")
+}
 
-  //plaats hier de code die continue herhaald moet worden.
+function drawcircle(x,y,d,c) {
+  fill(c);
+  ellipse(x * windowWidth +xoffleft ,y *windowHeight +yoffup,d);
 };
